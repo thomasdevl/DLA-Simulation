@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLA Simulation</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+        .control-panel {
+            margin-bottom: 20px;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://fr.wikipedia.org/wiki/Agr%C3%A9gation_limit%C3%A9e_par_diffusion#:~:text=Le%20mod%C3%A8le%20d'agr%C3%A9gation%20limit%C3%A9e,cluster)%2C%20par%20agr%C3%A9gations%20successives."
+        target="_blank">
+        <h1>DLA Simulation</h1>
+    </a>
+
+    <canvas id="dlaCanvas" width="500" height="500"></canvas>
+    
+    <div class="control-panel">
+        <label for="initSize">Initial Size:</label>
+        <input type="range" id="initSize" min="5" max="100" value="10">
+        <span id="initSizeValue">10</span>
+        <br>
+
+        <label for="fullness">Matrix Fullness (%):</label>
+        <input type="range" id="fullness" min="0.1" max="1" step="0.1" value="0.3">
+        <span id="fullnessValue">0.3</span>
+        <br>
+
+        <label for="iterations">Number of Iterations:</label>
+        <input type="number" id="iterations" min="1" max="50" value="10">
+        <br>
+
+        <label for="delay">Delay (ms):</label>
+        <input type="number" id="delay" min="1" max="1000" value="10">
+        <br>
+
+        <label for="increase">Matrix Increase per Iteration:</label>
+        <input type="number" id="increase" min="1" max="100" value="7">
+        <br>
+
+        <button id="startButton">Start Simulation</button>
+    </div>
+
+    <div class="summary">
+        <h2>What is Diffusion Limited Aggregation (DLA)?</h2>
+        <p>Diffusion Limited Aggregation (DLA) is a fascinating process that simulates the formation of complex structures through random particle motion. In DLA, particles undergo random walks until they come into contact with existing particles, at which point they stick and become part of the growing structure. This process mimics natural phenomena such as the growth of crystals, the formation of snowflakes, and even some biological structures. As more particles are added, the structure evolves and becomes more intricate, revealing patterns that emerge from simple rules of particle motion and aggregation.</p>
+        
+        <h2>Why Increase the Grid Size Gradually?</h2>
+        <p>This simulation employs a modified version of the DLA algorithm where the grid size is gradually increased. Traditionally, with a fixed grid size, particles can take a very long time to find and stick to neighboring particles, leading to slow simulation progress. By incrementally expanding the grid, we allow particles to encounter neighbors more quickly and efficiently, speeding up the overall aggregation process and making the simulation more manageable and visually engaging.</p>
+    </div>
+
+    
+    <script src="dla.js"></script>
+</body>
+</html>
