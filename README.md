@@ -1,4 +1,9 @@
 # DLA-Simulation
+
+## Demo 
+https://github.com/user-attachments/assets/1beec87d-fe53-45b9-be5a-80565b61be9e
+
+
  
 <h2>What is Diffusion Limited Aggregation (DLA)?</h2>
 <p>Diffusion Limited Aggregation (DLA) is a fascinating process that simulates the formation of complex structures through random particle motion. In DLA, particles undergo random walks until they come into contact with existing particles, at which point they stick and become part of the growing structure. This process mimics natural phenomena such as the growth of crystals, the formation of snowflakes, and even some biological structures. As more particles are added, the structure evolves and becomes more intricate, revealing patterns that emerge from simple rules of particle motion and aggregation.</p>
